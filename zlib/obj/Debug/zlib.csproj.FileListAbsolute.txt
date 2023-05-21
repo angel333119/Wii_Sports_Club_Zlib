@@ -1,11 +1,11 @@
-D:\333\source\repos\zlib\zlib\bin\Debug\zlib.exe.config
-D:\333\source\repos\zlib\zlib\bin\Debug\zlib.exe
-D:\333\source\repos\zlib\zlib\bin\Debug\zlib.pdb
 D:\333\source\repos\zlib\zlib\obj\Debug\zlib.csproj.AssemblyReference.cache
 D:\333\source\repos\zlib\zlib\obj\Debug\zlib.csproj.SuggestedBindingRedirects.cache
 D:\333\source\repos\zlib\zlib\obj\Debug\zlib.Form1.resources
 D:\333\source\repos\zlib\zlib\obj\Debug\zlib.Properties.Resources.resources
 D:\333\source\repos\zlib\zlib\obj\Debug\zlib.csproj.GenerateResource.cache
 D:\333\source\repos\zlib\zlib\obj\Debug\zlib.csproj.CoreCompileInputs.cache
-D:\333\source\repos\zlib\zlib\obj\Debug\zlib.exe
-D:\333\source\repos\zlib\zlib\obj\Debug\zlib.pdb
+D:\333\source\repos\zlib\zlib\bin\Debug\Wii_Sports_Club_zlib_Tool.exe.config
+D:\333\source\repos\zlib\zlib\bin\Debug\Wii_Sports_Club_zlib_Tool.exe
+D:\333\source\repos\zlib\zlib\bin\Debug\Wii_Sports_Club_zlib_Tool.pdb
+D:\333\source\repos\zlib\zlib\obj\Debug\Wii_Sports_Club_zlib_Tool.exe
+D:\333\source\repos\zlib\zlib\obj\Debug\Wii_Sports_Club_zlib_Tool.pdb
