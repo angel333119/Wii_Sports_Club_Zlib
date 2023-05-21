@@ -52,6 +52,8 @@ namespace zlib
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //Comprimir arquivo
+
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Filter = "Todos os arquivos (*.*)|*.*";
             openFileDialog1.Title = "Escolha um arquivo para comprimir com ZLIB...";
@@ -61,7 +63,7 @@ namespace zlib
             {
                 foreach (String file in openFileDialog1.FileNames)
                 {
-                    string nomeArquivocomprimido = Path.ChangeExtension(file, "zlib");
+                    string nomeArquivocomprimido = Path.ChangeExtension(file, "z");
 
                     byte[] dados_arquivo_descomprimido = File.ReadAllBytes(file);
 
@@ -75,7 +77,6 @@ namespace zlib
                         b = (b + a) % mod;
                     }
                     uint adler32 = (b << 16) | a;
-
 
                     MemoryStream dados_descomprimidos = new MemoryStream(dados_arquivo_descomprimido);
                     MemoryStream dados_comprimidos = new MemoryStream();
@@ -100,9 +101,11 @@ namespace zlib
 
         private void button2_Click(object sender, EventArgs e)
         {
+            //Extrair arquivo
+
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.Filter = "Todos os arquivos (*.z)|*.z";
-            openFileDialog1.Title = "Escolha um arquivo para comprimir com ZLIB...";
+            openFileDialog1.Title = "Escolha um arquivo para descomprimir...";
             openFileDialog1.Multiselect = true;
 
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -113,16 +116,12 @@ namespace zlib
 
                     byte[] dadosComprimidos = File.ReadAllBytes(file);
 
-                    // Cria um MemoryStream para armazenar os dados comprimidos
                     using (MemoryStream streamComprimido = new MemoryStream(dadosComprimidos, 2, dadosComprimidos.Length - 2))
                     {
-                        // Cria um DeflateStream para descomprimir os dados
                         using (DeflateStream deflateStream = new DeflateStream(streamComprimido, CompressionMode.Decompress))
                         {
-                            // Cria um FileStream para salvar o arquivo descomprimido
                             using (FileStream arquivoStream = File.Create(arquivoDescomprimido))
                             {
-                                // Copia os dados descomprimidos para o arquivo
                                 deflateStream.CopyTo(arquivoStream);
                             }
                         }
